@@ -1,0 +1,158 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2017-07-13 01:03:17",
+    "containerVersion": {
+        "path": "accounts/104987277/containers/7209360/versions/0",
+        "accountId": "104987277",
+        "containerId": "7209360",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/104987277/containers/7209360",
+            "accountId": "104987277",
+            "containerId": "7209360",
+            "name": "PayPal Tracking",
+            "publicId": "GTM-MBGPN6G",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1499907614038",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/104987277/containers/7209360/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "104987277",
+                "containerId": "7209360",
+                "tagId": "1",
+                "name": "Add Client ID to PayPal Button",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\ntry{\n  document.getElementsByName('custom')[0].value = {{Google Analytics Client ID}};\n}catch(e){}\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1499907564171",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "104987277",
+                "containerId": "7209360",
+                "tagId": "2",
+                "name": "Google Analytics",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_PAGEVIEW"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "UA-100692829-1"
+                    }
+                ],
+                "fingerprint": "1499907564171",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "104987277",
+                "containerId": "7209360",
+                "triggerId": "5",
+                "name": "All Pages - Window Loaded",
+                "type": "WINDOW_LOADED",
+                "fingerprint": "1499907564169"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "104987277",
+                "containerId": "7209360",
+                "variableId": "2",
+                "name": "Google Analytics Client ID",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n return {{Google Analytics Cookie}}.match(/\\d+\\.\\d+$/g)[0];\n}  "
+                    }
+                ],
+                "fingerprint": "1499907564170"
+            },
+            {
+                "accountId": "104987277",
+                "containerId": "7209360",
+                "variableId": "1",
+                "name": "Google Analytics Cookie",
+                "type": "k",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decodeCookie",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "_ga"
+                    }
+                ],
+                "fingerprint": "1499907564169"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "104987277",
+                "containerId": "7209360",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "104987277",
+                "containerId": "7209360",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "104987277",
+                "containerId": "7209360",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "104987277",
+                "containerId": "7209360",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "104987277",
+                "containerId": "7209360",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "0",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/104987277/containers/7209360/versions/0?apiLink=version"
+    }
+}
